@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Lavanda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loja de Lavanda</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#carrinho">Carrinho (<span id="carrinho-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Bem-vindo à nossa loja de lavanda!</h2>
+        <p>Encontre produtos frescos e naturais para todos os gostos.</p>
+    </section>
+
+    <section id="produtos">
+        <h2>Produtos</h2>
+        <div class="carrossel">
+            <div class="produto">
+                <img src="lavanda1.jpg" alt="Óleo de Lavanda">
+                <h3>Óleo de Lavanda</h3>
+                <p>Óleo essencial de lavanda 100% puro.</p>
+                <button onclick="adicionarAoCarrinho('Óleo de Lavanda')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="lavanda2.jpg" alt="Sabonete de Lavanda">
+                <h3>Sabonete de Lavanda</h3>
+                <p>Sabonete artesanal com aroma suave de lavanda.</p>
+                <button onclick="adicionarAoCarrinho('Sabonete de Lavanda')">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais produtos conforme necessário -->
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="carrinho">
+        <h2>Carrinho</h2>
+        <ul id="lista-carrinho">
+            <!-- Itens do carrinho aparecerão aqui -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Loja de Lavanda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
